@@ -1,12 +1,4 @@
 {
-<<<<<<< HEAD
-  "dependencies": {
-    "@tsparticles/engine": "^3.8.1",
-    "@tsparticles/react": "^3.0.0",
-    "axios": "^1.8.4",
-    "react-tsparticles": "^2.12.2",
-    "tsparticles": "^3.8.1"
-=======
   "name": "textsimilarity-frontend",
   "version": "0.1.0",
   "private": true,
@@ -20,8 +12,8 @@
     "@tsparticles/preset-links": "^3.2.0",
     "@tsparticles/react": "^3.0.0",
     "axios": "^1.8.4",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -48,6 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
->>>>>>> eb11622 (Initialize project using Create React App)
   }
 }
