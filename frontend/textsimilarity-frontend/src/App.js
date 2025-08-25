@@ -12,7 +12,7 @@ function App() {
   const handleSubmit = async () => {
     try { //the backend will 'repond' to the request 'posted' by the frontend 
       //which will be stored in 'response' variable
-      const response = await axios.post('https://similarity-detector-project-1.onrender.com', {
+      const response = await axios.post('https://similarity-detector-project-1.onrender.com/predict', {
         sentence1,
         sentence2,
       });
