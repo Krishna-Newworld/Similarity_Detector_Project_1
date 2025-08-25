@@ -11,6 +11,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 # ------------------- NLTK Downloads ------------------- #
 nltk.download('punkt')
+nltk.download('punkt_tab')
 nltk.download('averaged_perceptron_tagger')
 
 # ---------------- Feature Computation ---------------- #
