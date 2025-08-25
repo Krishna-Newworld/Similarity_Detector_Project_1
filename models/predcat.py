@@ -9,10 +9,13 @@ from nltk import word_tokenize, pos_tag
 from nltk.util import ngrams
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-# ------------------- NLTK Downloads ------------------- #
-nltk.download('punkt')
-nltk.download('punkt_tab')
-nltk.download('averaged_perceptron_tagger')
+# ------------------- NLTK Setup ------------------- #
+# Point to local nltk_data/ (either inside models/ or project root)
+NLTK_PATH = os.path.join(os.path.dirname(__file__), "nltk_data")
+if not os.path.exists(NLTK_PATH):
+    NLTK_PATH = os.path.join(os.path.dirname(__file__), "..", "nltk_data")
+
+nltk.data.path.append(NLTK_PATH)
 
 # ---------------- Feature Computation ---------------- #
 
@@ -65,9 +68,7 @@ def extract_features_from_sentence_pair(sent1, sent2):
 
 # ---------------- Load Preprocessing Objects ---------------- #
 
-# Base directory of this file
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# Go up one folder (from models/ to project root) then into saved_models
 model_dir = os.path.join(BASE_DIR, "..", "saved_models")
 
 label_encoder_path = os.path.join(model_dir, "label_encoder.pkl")
