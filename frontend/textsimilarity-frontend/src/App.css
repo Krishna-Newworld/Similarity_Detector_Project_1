@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+.creators {
+  position: relative;
+  z-index: 10;
+  color: black;
+}
+.App {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(270deg, #ff40ef,  #834eff);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  padding: 2rem 1rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+#particles canvas{
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(0, 103, 151, 0.4);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+}
+
+textarea {
+  width: 100%;
+  height: 70px;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  resize: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(3px);
+}
+
+textarea::placeholder {
+  color: #cccccc;
+}
+
+textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  background-color: #1f1f1f;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: #3f3f3f;
+  transform: scale(1.02);
+}
+
+.result {
+  margin-top: 2rem;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.2rem;
+  border-radius: 15px;
+  color: #e3e3e3;
+  font-size: 0.95rem;
+}
+
+/* Responsive Text Sizes and Layouts */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  textarea {
+    font-size: 15px;
+    height: 65px;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  .result {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 1rem 0.5rem;
+  }
+
+  .container {
+    padding: 1.2rem;
+    border-radius: 15px;
+  }
+
+  textarea {
+    height: 60px;
+    padding: 0.8rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+
+  .result {
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
+}
